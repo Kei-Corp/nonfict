@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="view-transition" content="same-origin" />
+    <title>お問い合わせ | NonFict</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRS2R9YK1E"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XRS2R9YK1E');
+    </script>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+        @view-transition {
+            navigation: auto;
+        }
+        #sidebar{
+            view-transition-name: sidebar;
+        }
+        ::view-transition-old(sidebar) {
+            animation: none;
+            display: none;
+        }
+        ::view-transition-new(sidebar) {
+            animation: none;
+        }
+        :root{
+            font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", system-ui;
+            scrollbar-color: #11b98e white;
+            scrollbar-width: thin;
+            letter-spacing: normal;
+        }
+        svg{
+            display: inline !important;
+            width: 27px !important;
+            height: 27px !important;
+        }
+        iframe{
+            pointer-events:none;
+        }
+        li{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-sm w-screen">
+	<div class="!w-screen" oncopy="return false;">
+        <div id="sidebar" class="w-screen h-[10vh] -top-[5vh] overflow-hidden relative bg-emerald-500 flex items-center justify-center skew-y-2">
+        </div>
+        <h1 class="block w-screen text-center text-4xl/loose font-medium text-emerald-500">
+            ⚫︎ お問い合わせ
+        </h1>
+        <h2 class="block w-screen text-center text-md text-slate-500">
+            運営への連絡の際は<a class="hover:underline text-emerald-500" href="mailto: nonfict@proton.me">nonfict@proton.me</a>までお問い合わせください。
+        </h2>
+    <footer class="text-sm bg-slate-50 absolute bottom-0 p-2 w-full text-center text-slate-500 text-xs">
+        <a class="hover:underline" href="/">ホーム</a>　<a class="hover:underline" href="/tos">利用規約</a>　<a class="hover:underline" href="/guideline">コミュニティガイドライン</a>　<a href="/contact" class="hover:underline">お問い合わせ</a>　<a href="/analytics" class="hover:underline">統計</a><br>
+        © 2024 KeyTack Co., Ltd
+    </footer>
+</body>
+</html>

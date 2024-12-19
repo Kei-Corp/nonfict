@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="view-transition" content="same-origin" />
+    <title>[[handlename]]（@[[username]]） | NonFict</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRS2R9YK1E"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XRS2R9YK1E');
+    </script>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+        @view-transition {
+            navigation: auto;
+        }
+        #sidebar{
+            view-transition-name: sidebar;
+        }
+        ::view-transition-old(sidebar) {
+            animation: none;
+            display: none;
+        }
+        ::view-transition-new(sidebar) {
+            animation: none;
+        }
+        :root{
+            font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", system-ui;
+            scrollbar-color: #11b98e white;
+            scrollbar-width: thin;
+            letter-spacing: normal;
+        }
+        svg{
+            display: inline !important;
+            width: 27px !important;
+            height: 27px !important;
+        }
+        .tippy-box[data-theme~='emerald'] {
+            background-color: white;
+            color: #1e293b;
+            border: 2px solid #11b98e;
+            border-radius: 0;
+            font-size: 0.7em;
+        }
+        .titttle{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        iframe{
+            pointer-events:none !important;
+        }
+	.description{
+	    overflow-wrap: anywhere;
+	}
+	body{
+	    overflow-x: hidden;
+	}
+    </style>
+</head>
+<body class="bg-slate-50 text-sm">
+	<div class="container h-screen w-full" oncopy="return false;">
+        <div id="sidebar" class="w-1/6 md:w-1/5 max-sm:justify-evenly max-sm:flex max-sm:w-screen max-sm:z-20 max-sm:-bottom-4 max-sm:top-auto h-screen max-sm:!h-auto p-6 max-sm:px-2 fixed top-0 -left-0.5">
+            <a href="/" class="-left-0 relative hidden md:block skew-x-3 max-sm:left-0 md:text-2xl lg:text-3xl font-medium text-emerald-500 pb-8 titttle">
+                ⚫︎NonFict.me
+            </a>
+            <a href="/"  class="block  left-0 bottom-0 text-xl transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] text-emerald-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-emerald-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-emerald-600 hover:border-emerald-600 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+                </svg>
+                <span class="hidden md:inline">ホーム</span>
+            </a>
+            <a href="/s/"  class="block box-border left-0 max-sm:left-0 bottom-0 transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)]  text-xl text-emerald-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-emerald-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-emerald-600 hover:border-emerald-600 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>                  
+                <span class="hidden md:inline">検索</span>
+            </a>
+            <a href="/n/"  class="block box-border left-0 max-sm:left-0 bottom-0 transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)]  text-xl text-emerald-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-emerald-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-emerald-600 hover:border-emerald-600 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                </svg>                  
+                <span class="hidden md:inline">通知</span>
+                <span id="nnn" class="hidden relative inline-flex h-3.5 w-3.5 max-sm:absolute max-md:top-2 max-md:right-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
+                </span>
+            </a>
+            <a href="/u/[[selfusername]]/"  class="font-semibold block left-0 max-sm:left-0 transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] bottom-0  text-xl bg-emerald-500 w-12 md:w-auto lg:w-4/5 text-slate-50 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:bg-emerald-600 skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                </svg>
+                <span class="hidden md:inline">プロフィール</span>
+                </a>
+            <a href="https://www.twitch.tv/r_4981" id="isdoinglive" class="hidden box-border transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] left-0 bottom-0 text-xl text-violet-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-violet-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-violet-800 hover:border-violet-800 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"/>
+                    <path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"/>
+                    </svg>                  
+                <span class="hidden md:inline">開発者中継</span>
+                </a>
+            <div class="text-slate-500 text-xs max-sm:hidden skew-x-3 relative left-0">
+                <a class="hover:underline" href="/tos">利用規約</a><br>
+                <a class="hover:underline" href="/guideline">コミュニティガイドライン</a><br>
+                <a href="/analytics" class="hover:underline">統計</a><br>
+                <a class="hover:underline" href="/contact">お問い合わせ</a><br>
+                <a class="hover:underline" href="/logout">ログアウト</a><br>
+                © 2024 KeyTack Co., Ltd
+            </div>
+            <div class=" max-sm:hidden bg-slate-50  absolute bottom-6 border-2 border-emerald-500 p-3 skew-x-3 flex">
+                <a href="/u/[[selfusername]]/">
+                    <img class="w-12 h-12 relative hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)" class="icon" src="/[[selfusername]].webp">
+                </a>
+                <div class="hidden md:block ml-4">
+                    <a href="/u/[[selfusername]]/"><span class="font-semibold text-lg text-emerald-500 usernickname">[[selfhandlename]]</span></a><br>
+                    <span class="text-sm text-slate-500 username">@[[selfusername]]</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-sm:w-screen max-sm:p-0 w-5/6 md:w-4/5 p-6 absolute right-0 top-0">
+            <div class="w-full px-2 md:w-3/4 lg:w-7/12 mx-auto">
+                <div id="arkw43ith" class="relative">
+                    <div class="relative top-4 bg-slate-50  z-10 border-emerald-500 border-2">
+                        <div class="bg-slate-50 brightness-[0.85] contrast-[1.15] saturate-[1.03] group p-0 w-full h-64 relative overflow-hidden transition-all duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]">
+                            <div class="absolute blur-lg top-0 left-0 w-full h-full bg-slate-50 z-0"><iframe id="glasswindow-2" src="" scrolling="no" class="top-0 left-0 right-0 bottom-0 m-auto absolute"></iframe></div>
+                            <div class="absolute mix-blend-multiply top-0 left-0 w-full h-full bg-slate-50 z-0" id="forwidth"><iframe id="glasswindow" src="" scrolling="no" class="top-0 left-0 right-0 bottom-0 m-auto absolute"></iframe></div>
+                            <div class="bg-gradient-to-b from-transparent via-transparent via-90% to-emerald-500 opacity-10 w-full h-full absolute top-0 z-10"></div>
+                            <div class="w-full h-full text-right text-black text-sm z-20 absolute top-2 right-2" style="text-shadow: 0px 0px 10px rgba(255, 255, 255, 1);">
+                                <span class="relative inline-flex h-3.5 w-3.5 top-0.5" id="huitrihoji">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
+                                </span>
+                                硝子窓<span id="offffff"></span> - <a href="" id="url" class="hover:underline"></a><br>
+                            </div>
+                        </div>
+                        <div class="p-6 flex pb-0">
+                            <img class="w-32 h-32 hover:brightness-75 relative -top-12 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)] icon" src="/[[username]].webp">
+                            <div class="relative left-4 -top-1 w-full">
+                                [[button]]
+                                <span id="hndln" class="font-semibold text-2xl text-emerald-500">
+                                    [[handlename]]
+                                </span><br>
+                                <span class="text-sm text-slate-500">
+                                    @[[username]]
+                                </span><br>
+                                <div id="bino" class="mt-2 text-slate-800">
+                                    [[bio]]
+                                </div>
+                                <div class="mt-2 text-slate-500 text-xs [[isurl]]" id="kkkkurl">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 !w-4 !h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                                    </svg>
+                                    <a href="[[url]]" id="kkkkurl2" class="hover:underline">[[url]]</a>
+                                </div>
+                                <div class="mt-2 text-slate-500 text-xs">
+                                    <a href="/u/[[username]]/followers" class="hover:underline">フォロワー <b id="followers">[[followers]]</b></a>　<a href="/u/[[username]]/follows" class="hover:underline">フォロー中 <b id="followees">[[followees]]</b></a>
+                                </div>
+                                <div class="mb-2 text-slate-500 text-xs">
+                                    累計文字数 <b>[[chars]]</b>　平均文字数 <b>[[charaverage]]</b>　累計執筆時間 <b>[[times]]</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="megens" class="pt-4">
+                    </div>
+                    <div id="loading" class="text-white text-xs h-6 w-full absolute bottom-0">Hi!
+                    </div>
+                    <div id="megens2" style="display: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="edit" class="hidden z-20 target:flex w-full h-full items-center justify-center bg-black/85 backdrop-saturate-50 fixed top-0 left-0 backdrop-blur-sm">
+        <a href="#" class="w-full h-full absolute">
+        </a>
+        <div id="editmodal" class="bg-slate-50  p-4 absolute w-4/5 sm:w-2/3 md:w-1/2 lg:w-1/3">
+            <div class="text-sm font-semibold text-emerald-500">          
+                アイコン
+            </div>
+            <input type="file" id="upload02" name="file" class="hidden" accept="image/*"></input>
+            <img src="/[[username]].webp" id="iconupload" accept="image/*" class="hover:brightness-75 mb-4 w-24 h-24">
+            <div class="text-sm font-semibold mb-0.5 text-emerald-500">
+                表示名
+            </div>
+            <input id="handlename" class="bg-slate-50  border-2 top-0 right-0 text-slate-800 border-emerald-500 mb-4 w-full text-base p-2 focus:outline-none focus:border-emerald-600" type="text" value="[[handlename]]">
+            <div class="text-sm font-semibold mb-0.5 text-emerald-500">
+                プロフィール
+            </div>
+            <textarea id="bio" class="bg-slate-50  outline-none top-0 right-0 w-full p-2 border-2 text-slate-800 text-base border-emerald-500 mb-4 focus:border-emerald-600 h-28">[[basebio]]</textarea>
+            <div class="text-sm font-semibold mb-0.5 text-emerald-500">
+                リンク
+            </div>
+            <input id="dpurl" class="bg-slate-50  border-2 top-0 right-0 text-slate-800 border-emerald-500 w-full text-base p-2 focus:outline-none focus:border-emerald-600" type="text" value="[[url]]">
+            <button onclick="sendProfile()" class="right-4 text-lg top-4 hover:bg-emerald-600 absolute font-semibold block bg-emerald-500 text-white py-1 px-4 text-center">
+                保存
+            </button>
+        </div>
+    </div>
+	<template id="megen_template">
+		<div class="border-0 border-b-2 bg-slate-50  hover:bg-slate-100 cursor-pointer transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] p-6 pr-2 max-sm:px-4 relative border-emerald-500">
+            <a class="boosterlink hover:underline hidden text-violet-500 grow-0 shrink-0 block mb-2 hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]" href="" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 scale-75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                </svg> 
+                <span class="font-medium ygrehj">r-4981</span><span class="text-sm text-slate-500">によるダビング</span>
+            </a>
+            <a class="replyerlink hover:underline hidden text-emerald-500 grow-0 shrink-0 block mb-2 hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]" href="" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 scale-75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
+                </svg>
+                <span class="font-medium ygrehj2">r-4981</span><span class="text-sm text-slate-500">さんの発言「<span class="yreuhi font-medium text-slate-800"></span>」へのバギング</span>
+            </a>
+            <div class="vvetman flex">
+                <a class="proflink grow-0 shrink-0 w-16 h-16 mr-4 mt-1 hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]" href="" >
+                    <img class="w-16 h-16" class="icon" src="/favicon-32x32.png">
+                </a>
+                <div>
+                    <span class="heisposting relative inline-flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                        <span id="posting" class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    <a href=""  class="proflink font-semibold text-lg text-emerald-500 hover:text-emerald-600 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)] usernickname">Steve Jobs</a>
+                    <span class="text-slate-500 text-sm username">@SteveJobs</span>
+                    <span class="text-slate-500 text-sm date"> / 残り<span class="timer">50</span>秒</span>
+                    <div class="mt-2">
+                        <span class="text-slate-700 !text-slate-500 description overflow-wrap w-full"></span>
+                    </div>
+                    <div class="mt-4 flex relative text-slate-500">
+                        <button class="hover:text-rose-500 luvving transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                            <span class="loving"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg></span>          
+                            <span class="hidden loved"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg></span><span class="lnum pl-1"></span></button>
+                        <div class="inputting hidden p-0 pl-4 m-0">
+                            <button class="hover:text-violet-500 mr-4 dubbing transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125 boost">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>                        
+                            <span class="num"></span></button>
+                            <button class="hover:text-emerald-500 mr-4 comment transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                </svg>                  
+                            <span class="cnum"></span></button>
+                            <button class="hover:text-emerald-500 mr-4 transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                                <span class="replay"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                </svg></span>
+                                <span class="fastly hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 7.5A2.25 2.25 0 0 1 7.5 5.25h9a2.25 2.25 0 0 1 2.25 2.25v9a2.25 2.25 0 0 1-2.25 2.25h-9a2.25 2.25 0 0 1-2.25-2.25v-9Z" />
+                                </svg></span>             
+                            <span class="rnum"></span></button>
+                            <button class="hover:text-rose-800 delete transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                </svg>                                  
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</template>
+    <script src="//unpkg.com/fzstd@0.1.1"></script>
+    <script src="/base122.js"></script>
+    <script>let usrp = "[[username]]";</script>
+    <script src="/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="view-transition" content="same-origin" />
+    <title>通知 | NonFict</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRS2R9YK1E"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XRS2R9YK1E');
+    </script>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+        @view-transition {
+            navigation: auto;
+        }
+        #sidebar{
+            view-transition-name: sidebar;
+        }
+        ::view-transition-old(sidebar) {
+            animation: none;
+            display: none;
+        }
+        ::view-transition-new(sidebar) {
+            animation: none;
+        }
+        :root{
+            font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", system-ui;
+            scrollbar-color: #11b98e white;
+            scrollbar-width: thin;
+            letter-spacing: normal;
+        }
+        svg{
+            display: inline !important;
+            width: 27px !important;
+            height: 27px !important;
+        }
+        .tippy-box[data-theme~='emerald'] {
+            background-color: white;
+            color: #1e293b;
+            border: 2px solid #11b98e;
+            border-radius: 0;
+            font-size: 0.7em;
+        }
+        iframe{
+            pointer-events:none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-sm">
+	<div class="container h-screen w-full overflow-scroll" oncopy="return false;">
+        <div id="sidebar" class="w-1/6 md:w-1/5 max-sm:justify-evenly max-sm:flex max-sm:w-screen max-sm:z-20 max-sm:-bottom-4 max-sm:top-auto h-screen max-sm:!h-auto p-6 max-sm:px-2 fixed top-0 -left-0.5">
+            <a href="/" class="-left-0 relative hidden md:block skew-x-3 max-sm:left-0 md:text-2xl lg:text-3xl font-medium text-emerald-500 pb-8 titttle">
+                ⚫︎NonFict.me
+            </a>
+            <a href="/"  class="block  left-0 bottom-0 text-xl transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] text-emerald-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-emerald-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-emerald-600 hover:border-emerald-600 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+                </svg>
+                <span class="hidden md:inline">ホーム</span>
+            </a>
+            <a href="/s/"  class="block box-border left-0 max-sm:left-0 bottom-0 transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)]  text-xl text-emerald-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-emerald-500 relative hover:left-0 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-emerald-600 hover:border-emerald-600 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>                  
+                <span class="hidden md:inline">検索</span>
+            </a>
+            <a href="/n/"  class="font-semibold block left-0 max-sm:left-0 bottom-0 transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)]  text-xl bg-emerald-500 w-12 md:w-auto lg:w-4/5 text-slate-50 bg-emerald-500 relative hover:left-0 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:bg-emerald-600 skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z" clip-rule="evenodd" />
+                </svg>
+                <span class="hidden md:inline">通知</span>
+            </a>
+            <a href="/u/[[selfusername]]/"  class="block box-border left-0 max-sm:left-0 transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] bottom-0  text-xl text-emerald-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-emerald-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-emerald-600 hover:border-emerald-600 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <span class="hidden md:inline">プロフィール</span>
+                </a>
+            <a href="https://www.twitch.tv/r_4981" id="isdoinglive" class="hidden box-border transition-all duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] left-0 bottom-0 text-xl text-violet-500 w-12 md:w-auto lg:w-4/5 bg-slate-50  border-2 border-violet-500 relative hover:left-2 max-sm:hover:left-0 max-sm:hover:bottom-2 hover:text-violet-800 hover:border-violet-800 box-border skew-x-3 mb-4 p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"/>
+                    <path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"/>
+                    </svg>                  
+                <span class="hidden md:inline">開発者中継</span>
+                </a>
+            <div class="text-slate-500 text-xs max-sm:hidden skew-x-3 relative left-0">
+                <a class="hover:underline" href="/tos">利用規約</a><br>
+                <a class="hover:underline" href="/guideline">コミュニティガイドライン</a><br>
+                <a href="/analytics" class="hover:underline">統計</a><br>
+                <a class="hover:underline" href="/contact">お問い合わせ</a><br>
+                <a class="hover:underline" href="/logout">ログアウト</a><br>
+                © 2024 KeyTack Co., Ltd
+            </div>
+            <div class=" max-sm:hidden bg-slate-50  absolute bottom-6 border-2 border-emerald-500 p-3 skew-x-3 flex">
+                <a href="/u/[[selfusername]]/">
+                    <img class="w-12 h-12 relative hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)" class="icon" src="/[[selfusername]].webp">
+                </a>
+                <div class="hidden md:block ml-4">
+                    <a href="/u/[[selfusername]]/"><span class="font-semibold text-lg text-emerald-500 usernickname">[[selfhandlename]]</span></a><br>
+                    <span class="text-sm text-slate-500 username">@[[selfusername]]</span>
+                </div>
+            </div>
+        </div>
+        <div class="max-sm:w-screen max-sm:p-0 w-5/6 md:w-4/5 p-6 absolute right-0 top-4">
+            <div class="w-full px-2 md:w-3/4 lg:w-7/12 mx-auto">
+                <div id="megens">
+                    [[notifications]]
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//unpkg.com/fzstd@0.1.1"></script>
+    <script src="/base122.js"></script>
+</body>
+</html>

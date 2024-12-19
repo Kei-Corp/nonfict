@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@fastify/cookie": "^11.0.1",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/multipart": "^9.0.1",
+    "@fastify/redis": "^7.0.1",
+    "@fastify/static": "^8.0.1",
+    "@fastify/websocket": "^11.0.1",
+    "@mongodb-js/zstd": "^1.2.2",
+    "benchmark": "^2.1.4",
+    "diff": "^7.0.0",
+    "fastify": "^5.0.0",
+    "json-merge-patch": "^1.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "notepack.io": "^3.0.1",
+    "pako": "^2.1.0",
+    "ripgrep-bin": "^13.0.0",
+    "sharp": "^0.33.5",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.48.0",
+    "zx": "^8.1.9"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

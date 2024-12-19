@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../journal"
+		},
+		{
+			"path": "../../../Leibniz"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"fstream": "cpp"
+		}
+	}
+}

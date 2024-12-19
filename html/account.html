@@ -1,0 +1,197 @@
+<!-- TODO: fix this spagetti -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>リアリティを再び | NonFict</title>
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+	<script src="https://cdn.tailwindcss.com"></script>
+    <meta property="og:url" content="https://nonfict.me/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="リアリティを再び | NonFict" />
+    <meta property="og:description" content="NonFictは世界初の『入力中の内容を公開するSNS』です。嘘をつこうとするほど本音が露呈するノンフィクション、貴方は生き残れますか?" />
+    <meta property="og:site_name" content="NonFict" />
+    <meta property="og:image" content="https://nonfict.me/ogp.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@arusyukuhai" />
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRS2R9YK1E"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XRS2R9YK1E');
+    </script>
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+        :root{
+            font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", system-ui;
+            scrollbar-color: #11b98e white;
+            scrollbar-width: thin;
+            overflow-y: scroll;
+            letter-spacing: normal;
+        }
+        .tippy-box[data-theme~='emerald'] {
+            background-color: white;
+            color: #6b7280;
+            border: 2px solid #11b98e;
+            border-radius: 0;
+            font-size: 0.65rem;
+        }
+        svg{
+            display: inline !important;
+            width: 27px !important;
+            height: 27px !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-sm">
+	<div class="w-full md:flex flex-wrap overflow-x-hidden max-sm:h-[125vh]">
+        <div class="w-full h-[50vh] md:h-screen overflow-x-hidden overflow-y-scroll md:w-1/2 relative bg-emerald-500 relative flex items-center justify-center mb-2 md:skew-x-3 md:-left-6">
+            <div class="space-y-4 w-full mx-6 md:w-2/3 h-full" oncopy="return false;">
+                <div id="megens">
+                </div>
+            </div>
+        </div>
+        <div class="w-full max-md:mt-8 md:w-1/2 bg-slate-50  h-screen/2 relative flex items-center justify-center">
+            <div class="relative left-6">
+                    <h2 class="text-3xl block relative text-emerald-500 font-medium titttle">
+                    ⚫︎NonFict.me
+                </h2>
+                <h1 class="block h-52 md:h-56 lg:h-96 text-4xl/loose md:text-4xl/loose lg:text-6xl/loose text-emerald-500 font-medium">
+                    <span id="catchcopy">
+                    </span>
+                </h1>
+                <h3 class="text-sm text-slate-800 leading-8 ml-4 mr-4 mb-4 relative -left-2">
+                    NonFictは世界初の『入力中の内容を記録、公開するSNS』です。<br/>
+                    嘘をつこうとするほど本音が露呈するノンフィクション。貴方は生き残れますか？
+                </h3>
+                <div class="flex relative -left-2">
+                    <a id="sign-up-button" href="#sign-up" class="text-xl font-semibold hover:bg-emerald-600 pt-2.5 relative block w-1/3 bg-emerald-500 text-white p-2 relative left-2 text-center m-2">
+                        新規登録
+                    </a>
+                    <a id="login-button" href="#login" class="text-xl font-semibold hover:text-emerald-600 box-border relative block w-1/3 border-emerald-500 border-2 text-emerald-500 p-2 relative left-2 text-center m-2">
+                        ログイン
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer class="text-sm bg-slate-50  p-2 w-full text-center text-slate-500 text-xs">
+            <a class="hover:underline" href="/tos">利用規約</a>　<a class="hover:underline" href="/guideline"></a>コミュニティガイドライン</a>　<a href="/contact" class="hover:underline">お問い合わせ</a>　<a href="/analytics" class="hover:underline">統計</a><br>
+            © 2024 KeyTack Co., Ltd
+        </footer>
+    </div>
+    <div id="login" class="invisible target:visible w-full h-full flex items-center justify-center bg-black/85 backdrop-saturate-50 fixed top-0 left-0 backdrop-blur-sm">
+        <a href="#" class="w-full h-full absolute">
+        </a>
+        <div class="bg-slate-50  p-4 text-center absolute">
+            <h2 class="text-xl font-medium text-emerald-500 m-4">お帰りなさいませ！</h2>
+            <input required class="bg-slate-50  border-2 text-emerald-600 border-emerald-500 p-2 focus:outline-none focus:border-emerald-600 m-2" id="username0" type="text" placeholder="ユーザーID"><br>
+            <input required class="bg-slate-50  border-2 text-emerald-600 border-emerald-500 p-2 focus:outline-none focus:border-emerald-600 m-2" id="password0" type="password" placeholder="パスワード"><br>
+            <button onclick="login()" id="true-login-button" class="text-xl hover:bg-emerald-600 relative font-semibold block w-1/2 bg-emerald-500 text-white p-2 text-center m-4 mx-auto">
+                ログイン
+            </button>
+            <span class="text-sm text-slate-800">
+                <a class="text-emerald-500" href="#sign-up">
+                    アカウント登録
+                </a>はこちらから
+            </span>
+        </div>
+    </div>
+    <div id="sign-up" class="invisible target:visible w-full h-full flex items-center justify-center bg-black/85 backdrop-saturate-50 fixed top-0 left-0 backdrop-blur-sm">
+        <a href="#" class="w-full h-full absolute">
+        </a>
+        <div class="bg-slate-50  p-4 text-center absolute">
+            <h2 class="text-xl font-medium text-emerald-500 m-4">ようこそ、エメラルドの都へ</h2>
+            <input required class="bg-slate-50  border-2 text-emerald-600 border-emerald-500 p-2 focus:outline-none focus:border-emerald-600 m-2" id="username1" type="text" placeholder="ユーザーID"><br>
+            <div id="usernameok" class="text-xs font-semibold hidden text-red-500"></div>
+            <input required class="bg-slate-50  border-2 text-emerald-600 border-emerald-500 p-2 focus:outline-none focus:border-emerald-600 m-2" id="handlename" type="text" placeholder="表示名"><br>
+            <div id="handlenameok" class="text-xs font-semibold hidden text-red-500"></div>
+            <input required class="bg-slate-50  border-2 text-emerald-600 border-emerald-500 p-2 focus:outline-none focus:border-emerald-600 m-2" id="password1" type="password" placeholder="パスワード"><br>
+            <span id="ryusyutu" class="text-xs font-semibold text-red-500"></span>
+            <button onclick="signup()" id="true-sign-up-button" class="text-xl hover:bg-emerald-600 relative font-semibold block w-1/2 bg-emerald-500 text-white p-2 text-center m-4 mx-auto">
+                登録
+            </button>
+            <span class="text-sm text-slate-800">
+                すでにアカウントがある場合は<a class="text-emerald-500" href="#login">
+                    ログイン
+                </a>
+            </span>
+        </div>
+    </div>
+    <div id="returnkekka" class="invisible target:visible w-full h-full flex items-center justify-center bg-black/85 backdrop-saturate-50 fixed top-0 left-0 backdrop-blur-sm">
+        <a href="#" class="w-full h-full absolute">
+        </a>
+        <div id="returnmodal" class="bg-slate-50  p-4 text-center absolute">
+        </div>
+    </div>
+	<template id="megen_template">
+		<div class="relative bg-slate-50  p-6 relative mb-4">
+            <a class="boosterlink hover:underline hidden text-violet-500 grow-0 shrink-0 block mb-2 hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]" href="" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 scale-75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                </svg> 
+                <span class="font-medium ygrehj">r-4981</span><span class="text-sm text-slate-500">によるダビング</span>
+            </a>
+            <a class="replyerlink hover:underline hidden text-emerald-500 grow-0 shrink-0 block mb-2 hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]" href="" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 scale-75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
+                </svg>
+                <span class="font-medium ygrehj2">r-4981</span><span class="text-sm text-slate-500">さんの発言「<span class="yreuhi font-medium text-slate-800"></span>」へのバギング</span>
+            </a>
+            <div class="vvetman flex">
+                <a class="proflink grow-0 shrink-0 w-16 h-16 mr-4 mt-1 hover:brightness-75 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)]" href="" >
+                    <img class="w-16 h-16" class="icon" src="/favicon-32x32.png">
+                </a>
+                <div>
+                    <span class="heisposting relative inline-flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                        <span id="posting" class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    <a href=""  class="proflink font-semibold text-lg text-emerald-500 hover:text-emerald-600 transition duration-50 ease-[cubic-bezier(.68,-0.6,.32,1.6)] usernickname">Steve Jobs</a>
+                    <span class="text-slate-500 text-sm username">@SteveJobs</span>
+                    <span class="text-slate-500 text-sm date"> / 残り<span class="timer">50</span>秒</span>
+                    <div class="mt-2">
+                        <span class="text-slate-700 !text-slate-500 description overflow-wrap w-full"></span>
+                    </div>
+                    <div class="mt-4 flex relative text-slate-500">
+                        <button class="hover:text-rose-500 luvving transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                            <span class="loving"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                            </svg></span>          
+                            <span class="hidden loved"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+                            </svg></span><span class="lnum pl-1"></span></button>
+                        <div class="inputting hidden p-0 pl-4 m-0">
+                            <button class="hover:text-violet-500 mr-4 dubbing transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125 boost">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                </svg>                        
+                            <span class="num"></span></button>
+                            <button class="hover:text-emerald-500 mr-4 comment transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                </svg>                  
+                            <span class="cnum"></span></button>
+                            <button class="hover:text-emerald-500 mr-4 transition duration-100 ease-[cubic-bezier(.68,-0.6,.32,1.6)] hover:scale-125">
+                                <span class="replay"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                </svg></span>
+                                <span class="fastly hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+                                </svg></span>    
+                            <span class="rnum"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</template>
+    <script src="//unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="//unpkg.com/fzstd@0.1.1"></script>
+    <script src="/base122.js"></script>
+    <script src="/start.js"></script>
+</body>
+</html>

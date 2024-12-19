@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="view-transition" content="same-origin" />
+    <title>統計 | NonFict</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+        @view-transition {
+            navigation: auto;
+        }
+        #sidebar{
+            view-transition-name: sidebar;
+        }
+        ::view-transition-old(sidebar) {
+            animation: none;
+            display: none;
+        }
+        ::view-transition-new(sidebar) {
+            animation: none;
+        }
+        :root{
+            font-family: "Helvetica Neue", Helvetica, Arial, "Noto Sans JP", system-ui;
+            scrollbar-color: #11b98e white;
+            scrollbar-width: thin;
+            letter-spacing: normal;
+        }
+        svg{
+            display: inline !important;
+            width: 27px !important;
+            height: 27px !important;
+        }
+        iframe{
+            pointer-events:none;
+        }
+        li{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-sm w-screen">
+	<div class="!w-screen" oncopy="return false;">
+        <div id="sidebar" class="w-screen h-[10vh] -top-[5vh] overflow-hidden relative bg-emerald-500 flex items-center justify-center skew-y-2">
+        </div>
+        <h1 class="block w-screen text-center text-4xl/loose font-medium text-emerald-500">
+            ⚫︎ 統計記録
+        </h1>
+        <h2 class="block w-screen text-center text-md text-slate-500 my-2">
+            現在のユーザー数: <span id="uzrs">1</span>名　現在の累計文字数: <span id="chrz">128</span>文字　現在の投稿数: <span id="psts">128</span>件<br>
+            メモリ使用量: <span id="mem"></span>MB　レイテンシ: <span id="latency"></span>ms
+        </h2>
+        <div class="flex">
+            <div class="w-1/2"><canvas id="analytics-1"></canvas></div>
+            <div class="w-1/2"><canvas id="analytics-2"></canvas></div>
+            <div class="w-1/2"><canvas id="analytics-3"></canvas></div>
+        </div>
+        <div class="flex">
+            <div class="w-1/2"><canvas id="analytics-4"></canvas></div>
+            <div class="w-1/2"><canvas id="analytics-5"></canvas></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script>
+            let charts = [], pinga = {}, mema = {}, l = {scales: {xAxes: [{display: true}], yAxes: [{type: 'logarithmic', ticks: {
+                            autoSkip: true,
+                            callback: function (value, index, values) {
+                                return value
+                            }
+                        },}]}}
+
+            const rerender = async ()=>{
+                if(charts.length >= 1){charts.forEach(_=>_.destroy()); charts = []}
+                const startTime = performance.now();
+                let p = await (await fetch("/stats/")).text()
+                const endTime = performance.now();
+                const ping = Math.floor(endTime - startTime)
+                
+                p = JSON.parse(p)
+                document.getElementById("uzrs").innerHTML = p["uzrs"]
+                document.getElementById("chrz").innerHTML = p["chars"]
+                document.getElementById("psts").innerHTML = p["posts"]
+                document.getElementById("mem").innerHTML = Math.floor(p["mems"] / 1024 / 1024)
+                document.getElementById("latency").innerHTML = ping
+
+                pinga[new Date().toLocaleDateString('sv-SE') + " " + new Date().toLocaleTimeString()] = ping
+                mema[new Date().toLocaleDateString('sv-SE') + " " + new Date().toLocaleTimeString()] = Math.floor(p["mems"] / 1024 / 1024)
+
+                charts.push(new Chart(document.getElementById("analytics-1"), {type: 'line', data: {labels: Object.keys(p["uzrshis"]), datasets: [{label: "ユーザー数", borderColor:"rgb(17, 185, 129)", backgroundColor:"rgba(17, 185, 129, 0.5)", data:Object.values(p["uzrshis"]).map(_=>parseInt(_)), tension: 0}]}, options: l}))
+                charts.push(new Chart(document.getElementById("analytics-2"), {type: 'line', data: {labels: Object.keys(p["chrshis"]), datasets: [{label: "累計文字数", borderColor:"rgb(17, 185, 129)", backgroundColor:"rgba(17, 185, 129, 0.5)", data:Object.values(p["chrshis"]).map(_=>parseInt(_)), tension: 0}]}, options: l}))
+                charts.push(new Chart(document.getElementById("analytics-3"), {type: 'line', data: {labels: Object.keys(p["postshis"]), datasets: [{label: "累計投稿数", borderColor:"rgb(17, 185, 129)", backgroundColor:"rgba(17, 185, 129, 0.5)", data:Object.values(p["postshis"]).map(_=>parseInt(_)), tension: 0}]}, options: l}))
+                charts.push(new Chart(document.getElementById("analytics-4"), {type: 'line', data: {labels: Object.keys(pinga), datasets: [{label: "ping値", borderColor:"rgb(17, 185, 129)", backgroundColor:"rgba(17, 185, 129, 0.5)", data:Object.values(pinga), tension: 0}]}}))
+                charts.push(new Chart(document.getElementById("analytics-5"), {type: 'line', data: {labels: Object.keys(mema), datasets: [{label: "メモリ消費", borderColor:"rgb(17, 185, 129)", backgroundColor:"rgba(17, 185, 129, 0.5)", data:Object.values(mema), tension: 0}]}}))
+            }
+            setInterval(rerender, 30000)
+            rerender()
+        </script>
+    </div>
+    <footer class="text-sm bg-slate-50  p-2 w-full text-center text-slate-500 text-xs">
+        <a class="hover:underline" href="/">ホーム</a>　<a class="hover:underline" href="/tos">利用規約</a>　<a class="hover:underline" href="/guideline">コミュニティガイドライン</a>　<a href="/contact" class="hover:underline">お問い合わせ</a>　<a href="/analytics" class="hover:underline">統計</a><br>
+        © 2024 KeyTack Co., Ltd
+    </footer>
+</body>
+</html>
